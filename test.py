@@ -1,7 +1,7 @@
-import pandas as pd
+from flask import Flask
 
-# Read the entire Excel file into a DataFrame
-df = pd.read_excel('C:/Users/purep/OneDrive/Documents/pythonExcel_Sheet.xlsx', sheet_name='python_Excel')
+app = Flask(__name__)
 
-# View the first 5 rows of data
-print(df)
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
